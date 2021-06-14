@@ -36,4 +36,3 @@ Here is an example for "Hello, World!":\
 \
 Here is an example for a for loop that prints numbers 0 to 9 with spaces in between:\
 ```+r+++++ddr+++iill[rorolild]```\
-\
