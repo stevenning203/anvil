@@ -2,6 +2,9 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <stack>
+#include <algorithm>
+#include <cstdlib>
 
 void Parse(std::string buffer)
 {
@@ -9,11 +12,22 @@ void Parse(std::string buffer)
 	int tmem = 0;
 	int head = 0;
 	unsigned long long pos = 0;
+	std::stack<unsigned long long> heads;
 	for (unsigned long long i = 0; i < (unsigned long long)buffer.size(); i++)
 	{
 		char k = buffer[i];
 		switch (k)
 		{
+		case '@':
+			head = 0;
+			break;
+		case '#':
+			std::cout.flush();
+			system("cls");
+			break;
+		case '*':
+			std::fill(memory.begin(), memory.end(), 0);
+			break;
 		case 'l':
 			head--;
 			break;
@@ -22,6 +36,9 @@ void Parse(std::string buffer)
 			break;
 		case 'o':
 			std::cout << (char)memory[head];
+			break;
+		case '%':
+			std::cout << memory[head];
 			break;
 		case 'i':
 			memory[head]++;
@@ -41,7 +58,7 @@ void Parse(std::string buffer)
 		case 'q':
 			tmem = memory[head];
 			break;
-		case 'f':
+		case '=':
 			if (tmem == memory[head])
 			{
 				i = pos - 1ULL;
@@ -55,6 +72,12 @@ void Parse(std::string buffer)
 			break;
 		case '<':
 			head -= 10;
+			break;
+		case '}':
+			head += 50;
+			break;
+		case '{':
+			head -= 50;
 			break;
 		case '+':
 			memory[head] += 10;
