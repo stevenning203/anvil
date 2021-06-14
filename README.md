@@ -21,7 +21,7 @@ a : add temporary memory to the value at the head.\
 q : set the temporary memory to the value at the head.\
 = : if the temporary memory is equal to the value at the head, jump to the value stored at position memory.\
 p : set the position value to the value at the head.\
-> : move the head 10 units to the right.\
+\> : move the head 10 units to the right.\
 < : move the head 10 units to the left.\
 } : move the head 50 units to the right.\
 { : move the head 50 units to the left.\
