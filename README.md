@@ -35,4 +35,4 @@ Here is an example for "Hello, World!":\
 ```+++++++iior++++++++++qiora+ddora+ddora+ior++++iiiio-ddo++++++dddddo++iiiioiiioddddddoddddddddor+++iiio```\
 \
 Here is an example for a for loop that prints numbers 0 to 9 with spaces in between:\
-```+r+++++ddr+++iill[rorolild]```\
+```+r+++++ddr+++iill[rorolild]```
