@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\steve\Documents\Programming\Anvil\Anvil\main.cpp(14,19): warning C4244: 'argument': conversion from 'unsigned __int64' to 'const unsigned int', possible loss of data
+C:\Users\steve\Documents\Programming\Anvil\Anvil\main.cpp(67,24): warning C4018: '>=': signed/unsigned mismatch
+  Anvil.vcxproj -> C:\Users\steve\Documents\Programming\Anvil\Debug\Anvil.exe

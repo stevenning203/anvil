@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\steve\Documents\Programming\Anvil\Anvil\main.cpp(14,19): warning C4244: 'argument': conversion from 'unsigned __int64' to 'const unsigned int', possible loss of data
+C:\Users\steve\Documents\Programming\Anvil\Anvil\main.cpp(72,24): warning C4018: '>=': signed/unsigned mismatch
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 207 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Anvil.vcxproj -> C:\Users\steve\Documents\Programming\Anvil\Release\Anvil.exe
