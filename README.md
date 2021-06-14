@@ -1,6 +1,6 @@
 # Anvil
 
-Anvil is an esoteric interpreted programming language written in C++.
+Anvil is an esoteric interpreted programming language written in C++. It is similar to BrainF but with an intention of making it more practical.
 
 In the current version, Anvil has 16384 memory slots, each available with 1 32-bit integer.
 
@@ -32,4 +32,8 @@ In the current version, Anvil has 16384 memory slots, each available with 1 32-b
 ```]``` : if the value at the head is above zero, jump to the position at the top of the stack and pop it.\
 \
 Here is an example for "Hello, World!":\
-```+++++++iior++++++++++qiora+ddora+ddora+ior++++iiiio-ddo++++++dddddo++iiiioiiioddddddoddddddddor+++iiio```
+```+++++++iior++++++++++qiora+ddora+ddora+ior++++iiiio-ddo++++++dddddo++iiiioiiioddddddoddddddddor+++iiio```\
+\
+Here is an example for a for loop that prints numbers 0 to 9 with spaces in between:\
+```+r+++++ddr+++iill[rorolild]```\
+\

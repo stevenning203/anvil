@@ -92,7 +92,7 @@ void Parse(std::string buffer)
 			heads.push(i);
 			break;
 		case ']':
-			if (head > 0)
+			if (memory[head] > 0)
 			{
 				i = heads.top() - 1;
 				heads.pop();
