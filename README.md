@@ -4,6 +4,8 @@ Anvil is an esoteric interpreted programming language written in C++. It is simi
 
 In the current version, Anvil has 16384 memory slots, each available with 1 32-bit integer.
 
+Notably, the entire program must be written on the same line (no newline characters).
+
 **Syntax:**
 
 ```@``` : reset the pointer head to 0.\
@@ -30,9 +32,14 @@ In the current version, Anvil has 16384 memory slots, each available with 1 32-b
 ```y``` : reset the value at the head to 0.\
 ```[``` : add the current position to the head stack\
 ```]``` : if the value at the head is above zero, jump to the position at the top of the stack and pop it.\
+```f``` : store the value at the head into the return register.\
+```F``` : return to the position pointed to by the return register.\
 \
 Here is an example for "Hello, World!":\
 ```+++++++iior++++++++++qiora+ddora+ddora+ior++++iiiio-ddo++++++dddddo++iiiioiiioddddddoddddddddor+++iiio```\
 \
 Here is an example for a for loop that prints numbers 0 to 9 with spaces in between:\
-```+r+++++ddr+++iill[rorolild]```
+```+r+++++ddr+++iill[rorolild]```\
+\
+The general structure for a for loop is as follows:\
+```+[d]```

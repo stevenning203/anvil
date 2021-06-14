@@ -11,13 +11,20 @@ void Parse(std::string buffer)
 	std::vector<int>memory(16384, 0);
 	int tmem = 0;
 	int head = 0;
-	unsigned long long pos = 0;
-	std::stack<unsigned long long> heads;
-	for (unsigned long long i = 0; i < (unsigned long long)buffer.size(); i++)
+	int return_register = 0;
+	int pos = 0;
+	std::stack<int> heads;
+	for (int i = 0; i < (int)buffer.size(); i++)
 	{
 		char k = buffer[i];
 		switch (k)
 		{
+		case 'f':
+			return_register = memory[head];
+			break;
+		case 'F':
+			i = return_register - 1;
+			break;
 		case '@':
 			head = 0;
 			break;
