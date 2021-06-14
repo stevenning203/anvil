@@ -6,8 +6,8 @@ In the current version, Anvil has 16384 memory slots, each available with 1 32-b
 
 **Syntax:**
 
-@ : reset the pointer head to 0.\
-\# : clear the console and flush the output stream.\
+```@``` : reset the pointer head to 0.\
+```#``` : clear the console and flush the output stream.\
 \* : reset all memory to 0.\
 l : move the head one to the left.\
 r : move the head one to the right.\
