@@ -88,12 +88,15 @@ void Parse(std::string buffer)
 		case 'y':
 			memory[head] = 0;
 			break;
-		case ';':
-			if (tmem > 0)
-				i = pos - 1ULL;
+		case '[':
+			heads.push(i);
 			break;
-		case ':':
-			tmem--;
+		case ']':
+			if (head > 0)
+			{
+				i = heads.top() - 1;
+				heads.pop();
+			}
 			break;
 		}
 		

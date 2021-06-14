@@ -28,8 +28,8 @@ In the current version, Anvil has 16384 memory slots, each available with 1 32-b
 ```+``` : add 10 to the value at the head.\
 ```-``` : subtract 10 from the value at the head.\
 ```y``` : reset the value at the head to 0.\
-```;``` : if temporary memory is above 0, go to the position stored at position memory.\
-```:``` : decrement the temporary memory.\
+```[``` : add the current position to the head stack\
+```]``` : if the value at the head is above zero, jump to the position at the top of the stack and pop it.\
 \
 Here is an example for "Hello, World!":\
 ```+++++++iior++++++++++qiora+ddora+ddora+ior++++iiiio-ddo++++++dddddo++iiiioiiioddddddoddddddddor+++iiio```

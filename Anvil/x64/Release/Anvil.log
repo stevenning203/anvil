@@ -1,7 +1,7 @@
 ﻿  main.cpp
   Generating code
-  2 of 207 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  81 of 299 functions (27.1%) were compiled, the rest were copied from previous compilation.
+    37 functions were new in current compilation
+    30 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Anvil.vcxproj -> C:\Users\steve\Documents\Programming\Anvil\x64\Release\Anvil.exe
