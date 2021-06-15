@@ -36,9 +36,7 @@ Functions can be nested to any degree as long as there is still free memory. Eac
 ```p``` : set the position value to the value at the head.\
 ```>``` : move the head 10 units to the right.\
 ```<``` : move the head 10 units to the left.\
-```
-\
-``` : move the head 50 units to the right.\
+```\```: move the head 50 units to the right.\
 ```/``` : move the head 50 units to the left.\
 ```+``` : add 10 to the value at the head.\
 ```-``` : subtract 10 from the value at the head.\
