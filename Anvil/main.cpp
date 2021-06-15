@@ -11,9 +11,8 @@ void Parse(std::string buffer, bool debug = false)
 	std::vector<int>memory(16384, 0);
 	int tmem = 0;
 	int head = 0;
-	int return_register = 0;
 	int pos = 0;
-	std::stack<int> heads;
+	std::stack<int> heads, fp;
 	for (int i = 0; i < (int)buffer.size(); i++)
 	{
 		char k = buffer[i];
@@ -23,10 +22,11 @@ void Parse(std::string buffer, bool debug = false)
 			std::cout << "HEAD LOCATION: " << head << " ||| DATA AT HEAD: " << memory[head] << std::endl;
 			break;
 		case 'f':
-			return_register = memory[head];
+			fp.push(i + 2);
 			break;
 		case 'F':
-			i = return_register - 1;
+			i = fp.top() - 1;
+			fp.pop();
 			break;
 		case '@':
 			head = 0;

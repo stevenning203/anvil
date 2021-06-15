@@ -33,8 +33,8 @@ End of line (```\n```) and all other characters are ignored. However, position n
 ```y``` : reset the value at the head to 0.\
 ```[``` : add the current position to the head stack\
 ```]``` : if the value at the head is above zero, jump to the position at the top of the stack and pop it.\
-```f``` : store the value at the head into the return register.\
-```F``` : return to the position pointed to by the return register.\
+```f``` : stack the current tape position plus two\
+```F``` : return to the position pointed to by the top of the function pointer stack and then pop the top of the function pointer stack.\
 \
 Here is an example for "Hello, World!":\
 ```+++++++iior++++++++++qiora+ddora+ddora+ior++++iiiio-ddo++++++dddddo++iiiioiiioddddddoddddddddor+++iiio```\
