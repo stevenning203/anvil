@@ -1,10 +1,10 @@
 # Anvil
 
-Anvil is an esoteric interpreted programming language written in C++. It is similar to BrainF but with an intention of making it more practical.
+Anvil is an esoteric functional interpreted programming language written in C++. It is similar to BrainF but with an intention of making it more practical.
 
 In the current version, Anvil has 32768 memory slots, each available with 1 32-bit integer.
 
-End of line (```\n```) and all other non-token characters are ignored. However, position numbers when used DO include characters such as spaces and non-tokenized letters, but DO NOT include end of line characters.
+End of line ```\n``` and all other non-token characters are ignored. However, position numbers when used DO include characters such as spaces and non-tokenized letters, but DO NOT include end of line characters.
 
 To write functions, simply make a new line and start writing code. To call them, use the token ```f``` after storing the number of the function that you wish to call at the head. The number of the function corresponds with the line number. Hence, your first function will always be numbered ```2```.
 
@@ -16,7 +16,7 @@ Functions can be nested to any degree as long as there is still free memory. Eac
 
 ```?``` : set the value pointed to by the head to the value stored in the return register.\
 ```j``` : jump the tape to the position pointed to by the value stored in position.\
-```!``` : debug output the location of the head and the data at the head location.\
+```!``` : debug output the location of the head and the data at the head location and the data in the return register.\
 ```f``` : jump to the function pointed to by the value at the head.\
 ```F``` : return the value pointed to by the head in a function. The value is stored within the return register. Only available within functions.\
 ```@``` : reset the pointer head to 0.\
@@ -36,7 +36,9 @@ Functions can be nested to any degree as long as there is still free memory. Eac
 ```p``` : set the position value to the value at the head.\
 ```>``` : move the head 10 units to the right.\
 ```<``` : move the head 10 units to the left.\
-```\\``` : move the head 50 units to the right.\
+```
+\
+``` : move the head 50 units to the right.\
 ```/``` : move the head 50 units to the left.\
 ```+``` : add 10 to the value at the head.\
 ```-``` : subtract 10 from the value at the head.\
@@ -52,7 +54,7 @@ Here is an example for a for loop that prints numbers 0 to 9 with spaces in betw
 \
 The general structure for a for loop is as follows:\
 ```+[d]```\
-Here is an example of a nested function:\
+Here is an example of a nested function:
 ```
 iif?%
 iiif?F
