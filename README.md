@@ -4,10 +4,11 @@ Anvil is an esoteric interpreted programming language written in C++. It is simi
 
 In the current version, Anvil has 16384 memory slots, each available with 1 32-bit integer.
 
-Notably, the entire program must be written on the same line (no newline characters).
+End of line (```\n```) and all other characters are ignored. However, position numbers when used DO include characters such as spaces and non-tokenized letters, but DO NOT include end of line characters.
 
 **Syntax:**
 
+```!``` : debug output the location of the head and the data at the head location.\
 ```@``` : reset the pointer head to 0.\
 ```#``` : clear the console and flush the output stream.\
 ```*``` : reset all memory to 0.\

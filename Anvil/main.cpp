@@ -125,15 +125,19 @@ int main(int argc, char* argv[])
 		std::cout << "Too many arguments: " << argc << std::endl;
 		return 0;
 	}
-	else if (argc == 0)
+	else if (argc == 1)
 	{
 		std::cout << "Did not specify a path to an Anvil file." << std::endl;
 		return 0;
 	}
 	std::string path = std::string(argv[1]);
 	std::ifstream op(path);
-	std::string buffer;
-	op >> buffer;
+	std::string buffer, line;
+	while (op.good())
+	{
+		op >> line;
+		buffer += line;
+	}
 	Parse(buffer);
 	return 0;
 }
