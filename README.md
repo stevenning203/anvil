@@ -57,5 +57,6 @@ Here is an example of a nested function:\
 iif?%
 iiif?F
 ++F
-```\
+```
+\
 This example will output 20 because the beginning first changes the value at the head to 2. Then a function call begins and the function on the second line is executed. This function increments the value at the head to 3 before calling another function. The last function stores a value of 20 at the head and then returns this value. The second function will store that value at the head before returning to the original tape. The original tape then stores the value that was returned and outputs it as a pure integer, yielding a value of 20.
