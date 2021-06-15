@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <cstdlib>
 
-void Parse(std::string buffer)
+void Parse(std::string buffer, bool debug = false)
 {
 	std::vector<int>memory(16384, 0);
 	int tmem = 0;
@@ -19,6 +19,9 @@ void Parse(std::string buffer)
 		char k = buffer[i];
 		switch (k)
 		{
+		case '!':
+			std::cout << "HEAD LOCATION: " << head << " ||| DATA AT HEAD: " << memory[head] << std::endl;
+			break;
 		case 'f':
 			return_register = memory[head];
 			break;
