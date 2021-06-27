@@ -14,6 +14,7 @@ Functions can be nested to any degree as long as there is still free memory. Eac
 
 **Syntax:**
 
+```|``` : switch the head to be located in the argument register.\
 ```?``` : set the value pointed to by the head to the value stored in the return register.\
 ```j``` : jump the tape to the position pointed to by the value stored in position.\
 ```!``` : debug output the location of the head and the data at the head location and the data in the return register.\

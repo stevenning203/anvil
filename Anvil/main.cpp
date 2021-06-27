@@ -6,7 +6,12 @@
 #include <algorithm>
 #include <cstdlib>
 
-int FParse(std::string& function, std::vector<std::string>& functions)
+void SwapRegisters(std::vector<int>& one, std::vector<int>& two)
+{
+	one.swap(two);
+}
+
+int FParse(std::string& function, std::vector<std::string>& functions, std::vector<int>& arguments)
 {
 	std::vector<int>memory(128, 0);
 	int tmem = 0, head = 0, pos = 0, return_register = 0;
@@ -16,6 +21,9 @@ int FParse(std::string& function, std::vector<std::string>& functions)
 		char k = function[i];
 		switch (k)
 		{
+		case '|':
+			SwapRegisters(memory, arguments);
+			break;
 		case '?':
 			memory[head] = return_register;
 			break;
@@ -31,7 +39,7 @@ int FParse(std::string& function, std::vector<std::string>& functions)
 				std::cout << "Invalid function number. Must be greater than or equal to 2." << std::endl;
 				return 0;
 			}
-			return_register = FParse(functions[memory[head]], functions);
+			return_register = FParse(functions[memory[head]], functions, arguments);
 			break;
 		case 'F':
 			return memory[head];
@@ -130,6 +138,7 @@ int FParse(std::string& function, std::vector<std::string>& functions)
 void Parse(std::string& buffer, std::vector<std::string>& functions, bool debug = false)
 {
 	std::vector<int>memory(32768, 0);
+	std::vector<int>arguments(64, 0);
 	int tmem = 0, head = 0, pos = 0, return_register = 0;
 	std::stack<int> heads, fp;
 	for (int i = 0; i < (int)buffer.size(); i++)
@@ -137,6 +146,9 @@ void Parse(std::string& buffer, std::vector<std::string>& functions, bool debug 
 		char k = buffer[i];
 		switch (k)
 		{
+		case '|':
+			SwapRegisters(memory, arguments);
+			break;
 		case '?':
 			memory[head] = return_register;
 			break;
@@ -146,7 +158,7 @@ void Parse(std::string& buffer, std::vector<std::string>& functions, bool debug 
 				std::cout << "Invalid function number. Must be greater than or equal to 2." << std::endl;
 				return;
 			}
-			return_register = FParse(functions[memory[head]], functions);
+			return_register = FParse(functions[memory[head]], functions, arguments);
 			break;
 		case 'j':
 			i = pos - 1;
