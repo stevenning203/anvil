@@ -2,9 +2,10 @@
 
 Anvil is an esoteric functional interpreted programming language written in C++. It is similar to BrainF but with an intention of making it more practical.
 
-In the current version, Anvil has 32768 memory slots, each available with 1 32-bit integer.
+In the current version, Anvil has 32768 memory slots, each available with 1 signed 32-bit integer.
+Functions have 64 signed 32-bit integer slots.
 
-End of line ```\n``` and all other non-token characters are ignored. However, position numbers when used DO include characters such as spaces and non-tokenized letters, but DO NOT include end of line characters.
+Non-token characters are ignored. However, position numbers when used DO include characters such as spaces and non-tokenized letters, but DO NOT include end of line characters.
 
 To write functions, simply make a new line and start writing code. To call them, use the token ```f``` after storing the number of the function that you wish to call at the head. The number of the function corresponds with the line number. Hence, your first function will always be numbered ```2```.
 
