@@ -31,7 +31,7 @@ int FParse(std::string& function, std::vector<std::string>& functions, std::vect
 			i = pos - 1;
 			break;
 		case '!':
-			std::cout << "HEAD LOCATION: " << head << " ||| DATA AT HEAD: " << memory[head] << " ||| RETURN REGISTER: " << return_register << std::endl;
+			std::cout << "HEAD LOCATION: " << head << " ||| DATA AT HEAD: " << memory[head] << " ||| TMEM: " << tmem << " ||| RETURN REGISTER: " << return_register << std::endl;
 			break;
 		case 'f':
 			if (memory[head] <= 1)
@@ -164,7 +164,7 @@ void Parse(std::string& buffer, std::vector<std::string>& functions, bool debug 
 			i = pos - 1;
 			break;
 		case '!':
-			std::cout << "HEAD LOCATION: " << head << " ||| DATA AT HEAD: " << memory[head] << " ||| RETURN REGISTER: " << return_register << std::endl;
+			std::cout << "HEAD LOCATION: " << head << " ||| DATA AT HEAD: " << memory[head] << " ||| TMEM: " << tmem << " ||| RETURN REGISTER: " << return_register << std::endl;
 			break;
 		case '@':
 			head = 0;
